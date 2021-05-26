@@ -35,16 +35,16 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'django_extensions',
-    'hexlet_django_orm_blog.blog',
+    'python_django_orm_blog.blog',
 ]
 
 MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'hexlet_django_orm_blog.urls'
+ROOT_URLCONF = 'python_django_orm_blog.urls'
 
-WSGI_APPLICATION = 'hexlet_django_orm_blog.wsgi.application'
+WSGI_APPLICATION = 'python_django_orm_blog.wsgi.application'
 
 
 # Database

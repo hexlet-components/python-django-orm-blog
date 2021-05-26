@@ -25,4 +25,4 @@ shell:
 
 .PHONY: lint
 lint:
-	@poetry run flake8 hexlet_django_orm_blog
+	@poetry run flake8 python_django_orm_blog
