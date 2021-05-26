@@ -8,7 +8,7 @@ def main():
     """Run administrative tasks."""
     os.environ.setdefault(
         'DJANGO_SETTINGS_MODULE',
-        'hexlet_django_orm_blog.settings',
+        'python_django_orm_blog.settings',
     )
     try:
         from django.core.management import execute_from_command_line

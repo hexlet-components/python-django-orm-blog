@@ -1,6 +1,6 @@
 import django.db  # noqa: WPS301
 import pytest
-from hexlet_django_orm_blog.blog import models
+from python_django_orm_blog.blog import models
 
 
 @pytest.mark.django_db

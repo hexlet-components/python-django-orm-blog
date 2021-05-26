@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hexlet_django_orm_blog"
+name = "python_django_orm_blog"
 version = "0.1.0"
 description = "A simple Django project that implements a simple blog."
 authors = ["Hexlet Team <info@hexlet.io>"]
