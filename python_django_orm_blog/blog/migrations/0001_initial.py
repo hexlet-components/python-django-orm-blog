@@ -16,8 +16,8 @@ class Migration(migrations.Migration):
             name='Post',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('updated', models.DateTimeField(auto_now=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('title', models.CharField(max_length=200)),
                 ('body', models.TextField()),
             ],
@@ -29,8 +29,8 @@ class Migration(migrations.Migration):
             name='Tag',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('updated', models.DateTimeField(auto_now=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('title', models.CharField(max_length=100)),
             ],
             options={
@@ -41,8 +41,8 @@ class Migration(migrations.Migration):
             name='User',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('updated', models.DateTimeField(auto_now=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('email', models.EmailField(max_length=254, unique=True)),
                 ('first_name', models.CharField(max_length=100, null=True)),
                 ('last_name', models.CharField(max_length=100, null=True)),
@@ -55,8 +55,8 @@ class Migration(migrations.Migration):
             name='PostComment',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('updated', models.DateTimeField(auto_now=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('body', models.TextField()),
                 ('creator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.user')),
                 ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.post')),
@@ -80,8 +80,8 @@ class Migration(migrations.Migration):
             name='PostLike',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('updated', models.DateTimeField(auto_now=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('creator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.user')),
                 ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.post')),
             ],
