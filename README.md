@@ -4,7 +4,7 @@
 
 ## Requirements
 
-* Python 3.6+
+* Python 3.8+
 * [Poetry](https://python-poetry.org/)
 * GNU Make
 
