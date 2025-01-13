@@ -4,8 +4,8 @@
 
 ## Requirements
 
-* Python 3.8+
-* [Poetry](https://python-poetry.org/)
+* Python 3.12+
+* [uv](https://docs.astral.sh/uv/)
 * GNU Make
 
 ## Setup
