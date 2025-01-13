@@ -1,19 +1,24 @@
-[tool.poetry]
+[project]
 name = "python_django_orm_blog"
 version = "0.1.0"
 description = "A simple Django project that implements a simple blog."
-authors = ["Hexlet Team <info@hexlet.io>"]
+authors = [{name = "Hexlet Team", email = "<info@hexlet.io>"}]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=5.1.4",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-Django = "^4.1.1"
+[dependency-groups]
+dev = [
+    "django-extensions>=3.2.3",
+    "ipython>=8.31.0",
+    "pytest-django>=4.9.0",
+    "ruff>=0.9.1",
+]
 
-[tool.poetry.group.dev.dependencies]
-flake8 = "^5.0.4"
-pytest-django = "^4.5.2"
-django-extensions = "^3.2.1"
-ipython = "^8.5.0"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.pytest.ini_options]
+norecursedirs = "__pycache__"
+addopts = "--strict-markers"
+python_files = "tests.py"
+DJANGO_SETTINGS_MODULE = "python_django_orm_blog.settings"

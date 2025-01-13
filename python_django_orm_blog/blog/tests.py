@@ -1,36 +1,37 @@
-import django.db  # noqa: WPS301
+import django.db
 import pytest
+
 from python_django_orm_blog.blog import models
 
 
 @pytest.mark.django_db
 def test_posting():
     """Test a typical blogging scenario with comments and likes."""
-    bob = models.User.objects.create(email='bob@blog.hexlet.io')
-    alice = models.User.objects.create(email='alice@blog.hexlet.io')
+    bob = models.User.objects.create(email="bob@blog.hexlet.io")
+    alice = models.User.objects.create(email="alice@blog.hexlet.io")
 
     assert models.User.objects.count() == 2
 
     bobs_intro = models.Post.objects.create(
-        title='Hello, World!',
+        title="Hello, World!",
         body="Hi there, I'm Bob!",
         creator=bob,
     )
 
     assert models.Post.objects.count() == 1
 
-    intro = models.Tag.objects.create(title='Introduction')
+    intro = models.Tag.objects.create(title="Introduction")
     bobs_intro.tags.add(intro)
 
     assert intro.post_set.count() == 1
 
     hello_from_alice = models.PostComment.objects.create(
-        body='Hi, Bob!',
+        body="Hi, Bob!",
         creator=alice,
         post=bobs_intro,
     )
     bobs_response = models.PostComment.objects.create(
-        body='Nice to meet you, Alice!',
+        body="Nice to meet you, Alice!",
         creator=bob,
         post=bobs_intro,
         response_to=hello_from_alice,
