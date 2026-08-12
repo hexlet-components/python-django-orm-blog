@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'django_extensions',
-    'python_django_orm_blog.blog',
+    'blog',
 ]
 
 MIDDLEWARE = [

@@ -1,7 +1,7 @@
 import django.db
 import pytest
 
-from python_django_orm_blog.blog import models
+from blog import models
 
 
 @pytest.mark.django_db
