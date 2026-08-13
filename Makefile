@@ -2,7 +2,7 @@ MANAGE := uv run python manage.py
 
 .PHONY: test
 test:
-	uv run pytest
+	@uv run pytest
 
 .PHONY: setup
 setup: db-clean install migrate
@@ -25,4 +25,7 @@ shell:
 
 .PHONY: lint
 lint:
-	uv run ruff check python_django_orm_blog
+	@uv run ruff check .
+
+.PHONY: check
+check: install lint test
