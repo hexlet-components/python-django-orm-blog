@@ -15,8 +15,8 @@ class User(TimestampedModel):
     """A blog user."""
 
     email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=100, null=True)
-    last_name = models.CharField(max_length=100, null=True)
+    first_name = models.CharField(max_length=100, blank=True)
+    last_name = models.CharField(max_length=100, blank=True)
 
 
 class Tag(TimestampedModel):

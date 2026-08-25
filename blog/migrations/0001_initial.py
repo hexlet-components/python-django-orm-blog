@@ -44,8 +44,8 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
                 ('email', models.EmailField(max_length=254, unique=True)),
-                ('first_name', models.CharField(max_length=100, null=True)),
-                ('last_name', models.CharField(max_length=100, null=True)),
+                ('first_name', models.CharField(blank=True, max_length=100)),
+                ('last_name', models.CharField(blank=True, max_length=100)),
             ],
             options={
                 'abstract': False,
