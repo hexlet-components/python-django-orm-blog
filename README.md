@@ -4,9 +4,9 @@
 
 ## Requirements
 
-* Python 3.12+
-* [uv](https://docs.astral.sh/uv/)
-* GNU Make
+- Python 3.12+
+- [uv](https://docs.astral.sh/uv/)
+- GNU Make
 
 ## Setup
 
