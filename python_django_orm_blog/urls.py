@@ -1,4 +1,3 @@
 """Just an empty routing."""
 
-urlpatterns = [
-]
+urlpatterns = []

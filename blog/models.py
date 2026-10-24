@@ -40,7 +40,9 @@ class PostComment(TimestampedModel):
     body = models.TextField()
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     response_to = models.ForeignKey(
-        'PostComment', on_delete=models.SET_NULL, null=True,
+        "PostComment",
+        on_delete=models.SET_NULL,
+        null=True,
     )
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -52,4 +54,4 @@ class PostLike(TimestampedModel):
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
-        unique_together = ['post', 'creator']
+        unique_together = ["post", "creator"]

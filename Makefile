@@ -26,6 +26,7 @@ shell:
 .PHONY: lint
 lint:
 	@uv run ruff check .
+	@uv run ruff format --check .
 
 .PHONY: check
 check: install lint test
